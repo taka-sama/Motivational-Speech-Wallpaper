@@ -1,0 +1,17 @@
+.vh-75 {
+  height: 75vh;
+}
+
+.paperText {
+  font-size: 1.5rem;
+  letter-spacing: 0.02;
+  line-height: 2.0;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .paperText {
+    font-size: 1.0rem;
+    line-height: 1.5;
+  }
+}
