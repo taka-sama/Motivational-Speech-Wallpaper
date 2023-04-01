@@ -5,7 +5,7 @@ function createWallPaper(cardObject) {
   let cardDiv = document.createElement("div");
   innerFlex.append(cardDiv);
   cardDiv.classList.add("vh-75", "p-md-5", "p-3", "my-5", "col-md-8", "col-12", "d-flex", "imgBackground", "justify-content-" + cardObject.verticalDirection, "align-items-" + cardObject.horizontalDirection);
-  //タグを取得して、背景画像を挿入する
+
   cardDiv.style.backgroundImage = 'url(' + cardObject.wallpaperUrl + ')';
   cardDiv.style.backgroundRepeat = 'no-repeat';
   cardDiv.style.backgroundSize = 'cover';
@@ -39,6 +39,5 @@ let wallpaper1 = new motivationalSpeechWallpaper("Perfection is achieved, not wh
 let wallpaper2 = new motivationalSpeechWallpaper("The scientist discovers a new type of material or energy and the engineer discovers a new use for it. - Gordon Lindsay Glegg", "007bff", "https://cdn.pixabay.com/photo/2018/02/23/04/38/laptop-3174729_1280.jpg", "left", "center");
 let wallpaper3 = new motivationalSpeechWallpaper("Scientists study the world as it is, engineers create the world that never has been. - Theodore von Karman", "ecf0f1", "https://cdn.pixabay.com/photo/2017/05/10/19/29/robot-2301646_1280.jpg", "center", "center");
 
-domObj.append(createWallPaper(wallpaper1));
-domObj.append(createWallPaper(wallpaper2));
-domObj.append(createWallPaper(wallpaper3));
+let wallpapers = [wallpaper1, wallpaper2, wallpaper3];
+wallpapers.map(wallpaper => domObj.append(createWallPaper(wallpaper)));
